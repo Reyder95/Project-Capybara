@@ -831,7 +831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 2.5
   lowJumpMultiplier: 10
-  speed: 2
+  speed: 5
   powerUpTimer: {fileID: 1357340744}
   currentMomentum: {x: 0, y: 0}
   isOnGround: 1
