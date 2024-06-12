@@ -8,11 +8,11 @@ public class CameraFollow : MonoBehaviour
     public float smoothFactor;
 
     private float leftBound = -10.79f;
-    private float rightBound = 32.43f;
-    private float topBound = 7f;
+    private float rightBound = 200.43f;
+    private float topBound = 25f;
     private float bottomBound = -5.10f;
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         Follow();
     }
@@ -23,7 +23,7 @@ public class CameraFollow : MonoBehaviour
         float width = height * Camera.main.aspect;
 
         Vector3 targetPosition = target.position + offset;
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, smoothFactor * Time.fixedDeltaTime);
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, smoothFactor * Time.deltaTime);
         smoothedPosition.x = Mathf.Clamp(smoothedPosition.x, leftBound + width / 2f, rightBound - width / 2f);
         smoothedPosition.y = Mathf.Clamp(smoothedPosition.y, bottomBound + height / 2f, topBound - height / 2f);
         transform.position = smoothedPosition;
