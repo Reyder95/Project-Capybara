@@ -9,6 +9,7 @@ public class MoveBackground : MonoBehaviour
     private float initCamY;
     public Camera cam;
     [SerializeField] private float parallaxEffect;
+    public Vector2 camOffset = new Vector3(0, 0);
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,6 @@ public class MoveBackground : MonoBehaviour
         float distance = (cam.transform.position.x * parallaxEffect);
         float offset = startPosY + (cam.transform.position.y - initCamY);
 
-        transform.position = new Vector3(startPosX + distance, offset, transform.position.z);
+        transform.position = new Vector3(camOffset.x + startPosX + distance, camOffset.y + offset, transform.position.z);
     }
 }

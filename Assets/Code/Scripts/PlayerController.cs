@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 [RequireComponent (typeof(BoxCollider2D))]
 public class PlayerController : MonoBehaviour
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public float lowJumpMultiplier = 2f;
 
     public float speed = 5f;
+    public float jumpSpeed = 100f;
+    public float useableSpeed;
 
     public PowerUpBase activePowerUp = new SuperSpeed();
 
@@ -85,6 +88,8 @@ public class PlayerController : MonoBehaviour
         //activePowerUp.Effect(this.gameObject);
 
         groundLayer = LayerMask.GetMask("Ground");
+
+        useableSpeed = speed;
     }
 
     private void Start()
@@ -282,11 +287,9 @@ public class PlayerController : MonoBehaviour
             if (velocity.y < 0)
             {
                 DescendSlope(ref velocity);
-                Debug.Log("Test!!");
             }
             else
             {
-                Debug.Log("No test!");
             }
 
 
@@ -397,7 +400,7 @@ public class PlayerController : MonoBehaviour
                 moveDirection.y = Mathf.Sin(slopeAngleRad);
             }
 
-            float adjustedSpeed = speed * Mathf.Cos(slopeAngle * Mathf.Deg2Rad);
+            float adjustedSpeed = useableSpeed * Mathf.Cos(slopeAngle * Mathf.Deg2Rad);
 
             Debug.Log(adjustedSpeed);
 

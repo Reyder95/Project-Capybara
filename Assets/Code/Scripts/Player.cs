@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
 
     float gravity;
     float moveSpeed = 6;
+    public float jumpSpeed = 15;
+    public float walkSpeed = 6;
     public float jumpHeight = 4;
     public float timeToJumpApex = .4f;
     float jumpVelocity;
@@ -31,10 +33,10 @@ public class Player : MonoBehaviour
         currHealth = maxHealth;
 
         // Debug: Give player all abilities
-        abilityList.Add(Game.Instance.abilityDictionary["Blue Wave"]);
-        abilityList.Add(Game.Instance.abilityDictionary["Green Crescent"]);
-        abilityList.Add(Game.Instance.abilityDictionary["Red Orb"]);
-        abilityList.Add(Game.Instance.abilityDictionary["Purple Crystal"]);
+        //abilityList.Add(Game.Instance.abilityDictionary["Blue Wave"]);
+        //abilityList.Add(Game.Instance.abilityDictionary["Green Crescent"]);
+        //abilityList.Add(Game.Instance.abilityDictionary["Red Orb"]);
+        //abilityList.Add(Game.Instance.abilityDictionary["Purple Crystal"]);
     }
 
     private void Start()
@@ -57,6 +59,11 @@ public class Player : MonoBehaviour
         {
             velocity.y = jumpVelocity;
         }
+
+        if (controller.collisions.below)
+            moveSpeed = walkSpeed;
+        else
+            moveSpeed = jumpSpeed;
 
         float targetVelocityX = input.x * moveSpeed;
         velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
