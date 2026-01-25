@@ -36,7 +36,7 @@ public class Game : MonoBehaviour
     public GameObject player;
     public GameObject playerPrefab;
     public Player playerInfo;
-    public GameObject playerSpawner;
+    public GameObject playerSpawnerList;
 
     public GameObject mainCamera;
 
@@ -72,9 +72,16 @@ public class Game : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        if (playerSpawner != null)
+        if (playerSpawnerList != null)
         {
-            GameObject spawnedPlayer = Instantiate(playerPrefab, playerSpawner.transform.position, Quaternion.identity);
+            SpawnerListOptions spawnerListOptions = playerSpawnerList.GetComponent<SpawnerListOptions>();
+            GameObject spawner = spawnerListOptions.getSpawner();
+            SpawnerOptions spawnerOptions = spawner.GetComponent<SpawnerOptions>();
+            GameObject spawnedPlayer = Instantiate(playerPrefab, spawner.transform.position, Quaternion.identity);
+
+            if (spawnerOptions.spawnAnim == false)
+                spawnedPlayer.GetComponent<PlayerController>().alreadyWake = true;
+
             player = spawnedPlayer;
             
             if (mainCamera != null)

@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
     float maxClimbAngle = 80;
     float maxDescendAngle = 80;
 
+    public bool alreadyWake = false;
+
     struct RaycastOrigins
     {
         public Vector2 topLeft, topRight;
@@ -373,9 +375,14 @@ public class PlayerController : MonoBehaviour
             Game.Instance.playerInfo.abilityList[Game.Instance.playerInfo.currAbility].CastAbility();
         }
 
-        if (!player.hasControl && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S)))
+        if (!alreadyWake && (!player.hasControl && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S))))
         {
             WakeUp();
+        }
+        else if (alreadyWake && !player.hasControl)
+        {
+            animator.Play("Idle");
+            player.hasControl = true;
         }
     }
 

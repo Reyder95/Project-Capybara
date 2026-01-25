@@ -33,10 +33,10 @@ public class Player : MonoBehaviour
         currHealth = maxHealth;
 
         // Debug: Give player all abilities
-        //abilityList.Add(Game.Instance.abilityDictionary["Blue Wave"]);
-        //abilityList.Add(Game.Instance.abilityDictionary["Green Crescent"]);
-        //abilityList.Add(Game.Instance.abilityDictionary["Red Orb"]);
-        //abilityList.Add(Game.Instance.abilityDictionary["Purple Crystal"]);
+        abilityList.Add(Game.Instance.abilityDictionary["Blue Wave"]);
+        abilityList.Add(Game.Instance.abilityDictionary["Green Crescent"]);
+        abilityList.Add(Game.Instance.abilityDictionary["Red Orb"]);
+        abilityList.Add(Game.Instance.abilityDictionary["Purple Crystal"]);
     }
 
     private void Start()
