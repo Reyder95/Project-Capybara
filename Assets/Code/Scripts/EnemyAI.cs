@@ -30,6 +30,7 @@ public class EnemyAI : MonoBehaviour
     public AITypes aiType;
     public AIStates aiState = AIStates.Patrol;
     public Direction facing = Direction.Left;
+    public GameObject sprite;
 
     public Vector2 leftBounds;
     public Vector2 rightBounds;
@@ -78,7 +79,7 @@ public class EnemyAI : MonoBehaviour
                     else if (facing == Direction.Right)
                         facing = Direction.Left;
 
-                    this.gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+                    sprite.gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 
                     stop = false;
                 }
@@ -92,7 +93,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     if (facing == Direction.Right)
                     {
-                        this.gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+                        sprite.gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
                         facing = Direction.Left;
                     }
                 }
@@ -100,7 +101,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     if (facing == Direction.Left)
                     {
-                        this.gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+                        sprite.gameObject.transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
                         facing = Direction.Right;
                     }
                 }

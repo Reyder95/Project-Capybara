@@ -52,10 +52,10 @@ public class BlueWaveComponent : MonoBehaviour
     {
         if (collision != null)
         {
-            if (collision.gameObject.tag == "Enemy")
+            if (collision.gameObject.tag == "Enemy Internal")
             {
                 RemoveProjectile();
-                if (collision.gameObject.TryGetComponent<EnemyStats>(out EnemyStats stats))
+                if (collision.gameObject.transform.parent.TryGetComponent<EnemyStats>(out EnemyStats stats))
                 {
                     stats.DealDamage(5);
                 }

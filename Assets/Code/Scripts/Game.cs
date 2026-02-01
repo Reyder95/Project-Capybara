@@ -87,6 +87,9 @@ public class Game : MonoBehaviour
             if (mainCamera != null)
             {
                 mainCamera.GetComponent<CameraFollow>().target = player.transform;
+
+                if (spawnerOptions.zoomFactor != -1f)
+                    mainCamera.GetComponent<CameraFollow>().zoomFactor = spawnerOptions.zoomFactor;
             }
         }
     }
