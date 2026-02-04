@@ -110,14 +110,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2eadc23daf5de40aaa058f996f632e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   patrolCenter: {x: 0, y: 0}
   patrolRange: 10
   aiType: 0
   aiState: 0
   facing: 0
+  sprite: {fileID: 0}
   leftBounds: {x: 0, y: 0}
   rightBounds: {x: 0, y: 0}
   stop: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  detectionDistance: 3
+  rayHeight: -0.3
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0.2
+  speed: 15
+  jumpForce: 10
 --- !u!60 &721179641222976600
 PolygonCollider2D:
   m_ObjectHideFlags: 0

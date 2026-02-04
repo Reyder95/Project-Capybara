@@ -37,7 +37,16 @@ public class EnemyAI : MonoBehaviour
 
     public bool stop = false;
 
-    public 
+    public LayerMask obstacleLayer;
+    public float detectionDistance = 1f;
+    public float rayHeight = 0.5f;
+
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+
+    public float speed = 15f;
+
+    public float jumpForce = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +67,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     if (facing == Direction.Left)
                     {
-                        this.gameObject.transform.Translate(new Vector2(-15f / 5, 0) * Time.deltaTime);
+                        this.gameObject.transform.Translate(new Vector2(-speed / 5, 0) * Time.deltaTime);
 
                         if (gameObject.transform.position.x < leftBounds.x)
                             stop = true;
@@ -66,7 +75,7 @@ public class EnemyAI : MonoBehaviour
 
                     if (facing == Direction.Right)
                     {
-                        this.gameObject.transform.Translate(new Vector2(15f / 5, 0) * Time.deltaTime);
+                        this.gameObject.transform.Translate(new Vector2(speed / 5, 0) * Time.deltaTime);
 
                         if (gameObject.transform.position.x > rightBounds.x)
                             stop = true;
@@ -108,16 +117,45 @@ public class EnemyAI : MonoBehaviour
 
                 if (facing == Direction.Left)
                 {
-                    this.gameObject.transform.Translate(new Vector2(-15f / 5, 0) * Time.deltaTime);
+                    this.gameObject.transform.Translate(new Vector2(-speed / 5, 0) * Time.deltaTime);
                 }
 
                 if (facing == Direction.Right)
                 {
-                    this.gameObject.transform.Translate(new Vector2(15f / 5, 0) * Time.deltaTime);
+                    this.gameObject.transform.Translate(new Vector2(speed / 5, 0) * Time.deltaTime);
                 }
             }
         }
 
+        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y + rayHeight);
+        Vector2 rayDirection = facing == Direction.Left ? Vector2.left : Vector2.right;
+
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, rayDirection, detectionDistance, obstacleLayer);
+
+        Debug.DrawRay(rayOrigin, rayDirection * detectionDistance, Color.red);
+
+        if (hit.collider != null)
+        {
+            if (CanJump())
+            {
+                Jump();
+
+            }
+        }
+    }
+
+    bool CanJump()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, obstacleLayer);
+    }
+
+    void Jump()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

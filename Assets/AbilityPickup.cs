@@ -18,7 +18,6 @@ public class AbilityPickup : MonoBehaviour
     public void Update()
     {
         transform.position = Vector2.Lerp(transform.position, nextPos, 0.5f * Time.deltaTime);
-        Debug.Log(Vector2.Distance(transform.position, nextPos));
         if (Vector2.Distance(transform.position, nextPos) < 0.2)
         {
             if (nextPos.y < initPos.y)
