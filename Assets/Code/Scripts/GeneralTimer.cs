@@ -22,7 +22,6 @@ public class GeneralTimer : MonoBehaviour
 
     public void OnTimerElapsed(object sender, ElapsedEventArgs e)
     {
-        Debug.Log(time + " seconds left!");
 
         time--;
 
