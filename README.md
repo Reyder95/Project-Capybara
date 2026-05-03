@@ -1,11 +1,17 @@
 Red
 
 Health - Depletes from enemy and environmental damage when Armor is destroyed  
+
 Armor - Depletes from enemy and environmental damage 
-Blue Essence - Magical energy (or mana) for Blue Wave. Depletes upon use of the spell but slowly regenerates  
+
+Blue Essence - Magical energy (or mana) for Blue Wave. Depletes upon use of the spell but slowly regenerates 
+
 Green Essence - Magical energy (or mana) for Green Crescent. Depletes upon use of the spell but slowly regenerates
+
 Red Essence - Magical energy (or mana) for Red Orb. Depletes upon use of the spell but slowly regenerates  
+
 Purple Essence - Magical energy (or mana) for Purple Crystal. Depletes upon use of the spell but slowly regenerates  
+
 Grey Essence - Magical energy (or mana) for Grey Spike. Depletes upon use of the spell but slowly regenerates  
 
 Spells
