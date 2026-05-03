@@ -1,4 +1,3 @@
-# Testing ReadmeRed
 Red
 
 Health - Depletes from enemy and environmental damage when Armor is destroyed  
