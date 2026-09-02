@@ -599,6 +599,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8060051718540206110, guid: 0a06ac2262af6924289c6093d082e507, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060051718540206110, guid: 0a06ac2262af6924289c6093d082e507, type: 3}
+      propertyPath: collisionMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4621894861107484506, guid: 0a06ac2262af6924289c6093d082e507, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0a06ac2262af6924289c6093d082e507, type: 3}

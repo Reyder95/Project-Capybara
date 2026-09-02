@@ -32,8 +32,17 @@ public class EnemyAI : MonoBehaviour
     public Direction facing = Direction.Left;
     public GameObject sprite;
 
+    float moveSpeed = 6;
+    public float jumpSpeed = 15;
+    public float walkSpeed = 6;
+    public float jumpHeight = 4;
+    public float timeToJumpApex = .4f;
+    float jumpVelocity;
+
     public Vector2 leftBounds;
     public Vector2 rightBounds;
+
+    Vector3 velocity;
 
     public bool stop = false;
 
@@ -48,17 +57,33 @@ public class EnemyAI : MonoBehaviour
 
     public float jumpForce = 10f;
 
+    float gravity;
+
+    private EnemyController controller;
+
     // Start is called before the first frame update
     void Start()
     {
         patrolCenter = transform.position;
+        controller = GetComponent<EnemyController>();
         leftBounds = new Vector2(patrolCenter.x - patrolRange, 0);
         rightBounds = new Vector2(patrolCenter.x + patrolRange, 0);
+
+        gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
+        jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        if (controller.collisions.below)
+            moveSpeed = walkSpeed;
+        else
+            moveSpeed = jumpSpeed;
+
+        //velocity.y += gravity * Time.deltaTime;
+
         if (aiState == AIStates.Patrol)
         {
             if (patrolCenter != null)
@@ -67,7 +92,8 @@ public class EnemyAI : MonoBehaviour
                 {
                     if (facing == Direction.Left)
                     {
-                        this.gameObject.transform.Translate(new Vector2(-speed / 5, 0) * Time.deltaTime);
+                        velocity.x = -speed / 5;
+                        controller.Move(velocity * Time.deltaTime);
 
                         if (gameObject.transform.position.x < leftBounds.x)
                             stop = true;
@@ -75,7 +101,8 @@ public class EnemyAI : MonoBehaviour
 
                     if (facing == Direction.Right)
                     {
-                        this.gameObject.transform.Translate(new Vector2(speed / 5, 0) * Time.deltaTime);
+                        velocity.x = speed / 5;
+                        controller.Move(velocity * Time.deltaTime);
 
                         if (gameObject.transform.position.x > rightBounds.x)
                             stop = true;
@@ -117,12 +144,14 @@ public class EnemyAI : MonoBehaviour
 
                 if (facing == Direction.Left)
                 {
-                    this.gameObject.transform.Translate(new Vector2(-speed / 5, 0) * Time.deltaTime);
+                    velocity.x = speed / 5;
+                    controller.Move(velocity * Time.deltaTime);
                 }
 
                 if (facing == Direction.Right)
                 {
-                    this.gameObject.transform.Translate(new Vector2(speed / 5, 0) * Time.deltaTime);
+                    velocity.x = speed / 5;
+                    controller.Move(velocity * Time.deltaTime);
                 }
             }
         }
@@ -134,14 +163,14 @@ public class EnemyAI : MonoBehaviour
 
         Debug.DrawRay(rayOrigin, rayDirection * detectionDistance, Color.red);
 
-        if (hit.collider != null)
-        {
-            if (CanJump())
-            {
-                Jump();
+        //if (hit.collider != null)
+        //{
+        //    if (CanJump())
+        //    {
+        //        Jump();
 
-            }
-        }
+        //    }
+        //}
     }
 
     bool CanJump()

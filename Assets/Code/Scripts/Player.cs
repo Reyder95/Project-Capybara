@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public float jumpHeight = 4;
     public float timeToJumpApex = .4f;
     float jumpVelocity;
-    Vector3 velocity;
+    public Vector3 velocity;
     float velocityXSmoothing;
     float accelerationTimeAirborne = .0f;
     float accelerationTimeGrounded = .0f;
@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+
         if (controller.collisions.above || controller.collisions.below)
         {
             velocity.y = 0;

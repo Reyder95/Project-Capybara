@@ -12,15 +12,18 @@ public class CameraFollow : MonoBehaviour
 
     public Transform target;
     public Vector3 offset;
-    public float zoomFactor = 1f;
+    public float zoomFactor = 1.2f;
+    public float transitionSpeed = 2f;
+    public float targetZoom;
+    public Vector2 targetOffset;
     [Range(1, 10)]
     public float smoothFactor;
     public float initZoom;
 
     private float leftBound = -10.79f;
-    private float rightBound = 200.43f;
+    private float rightBound = 900.43f;
     private float topBound = 25f;
-    private float bottomBound = -100f;
+    private float bottomBound = -5f;
 
     private CameraState state = CameraState.FOLLOW;
 
@@ -36,6 +39,8 @@ public class CameraFollow : MonoBehaviour
     private void Start()
     {
         initZoom = Camera.main.orthographicSize;
+        targetOffset = offset;
+        targetZoom = zoomFactor;
     }
 
     private void LateUpdate()
@@ -77,6 +82,11 @@ public class CameraFollow : MonoBehaviour
 
         Camera.main.orthographicSize = initZoom * zoomFactor;
 
+        zoomFactor = Mathf.Lerp(zoomFactor, targetZoom, transitionSpeed * Time.deltaTime);
+        offset = Vector2.Lerp(offset, targetOffset, transitionSpeed * Time.deltaTime);
+
+        Camera.main.orthographicSize = initZoom * zoomFactor;
+
         Vector3 targetPosition = target.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, smoothFactor * Time.deltaTime);
         smoothedPosition.x = Mathf.Clamp(smoothedPosition.x, leftBound + width / 2f, rightBound - width / 2f);
@@ -105,5 +115,11 @@ public class CameraFollow : MonoBehaviour
         float centerY = (stationary_topY + stationary_bottomY) / 2f;
         cameraEndPosition = new Vector3(centerX, centerY, -10f);
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, cameraEndPosition, 0.8f * Time.deltaTime);
+    }
+
+    public void SetFollowTargets(Vector2 newOffset, float newZoom)
+    {
+        targetOffset = newOffset;
+        targetZoom = newZoom;
     }
 }

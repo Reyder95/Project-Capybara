@@ -59,7 +59,6 @@ public class BlueWaveComponent : MonoBehaviour
                     RemoveProjectile();
                     if (collision.gameObject.transform.parent.TryGetComponent<EnemyStats>(out EnemyStats stats))
                     {
-                        Debug.Log("TEST");
                         stats.DealDamage(5);
                     }
                 }

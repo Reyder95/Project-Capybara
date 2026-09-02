@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     float maxDescendAngle = 80;
 
     public bool alreadyWake = false;
+    public bool autoMove = false;
 
     struct RaycastOrigins
     {
@@ -181,15 +182,11 @@ public class PlayerController : MonoBehaviour
             {
                 if (Mathf.Sign(hit.normal.x) == directionX)
                 {
-                    print("First One: " + (hit.distance - skinWidth));
-                    Debug.Log("Second One: " + (Mathf.Tan(slopeAngle * Mathf.Deg2Rad) * Mathf.Abs(velocity.x)));
                     if (hit.distance - (skinWidth*3) <= Mathf.Tan(slopeAngle * Mathf.Deg2Rad) * Mathf.Abs(velocity.x))
                     {
-                        Debug.Log("TESTING!");
                         float moveDistance = Mathf.Abs(velocity.x);
                         float descendVelocityY = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * moveDistance;
 
-                        Debug.Log(descendVelocityY);
                         velocity.x = Mathf.Cos(slopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign(velocity.x);
                         velocity.y -= descendVelocityY;
 
@@ -260,15 +257,20 @@ public class PlayerController : MonoBehaviour
         raycastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
     }
 
-    public void Move(Vector3 velocity)
+    public void Move(Vector3 velocity, bool force = false)
     {
-        if (player.hasControl)
+        if (player.hasControl || force)
         {
-            Flip(velocity.x);
+            Flip(velocity.x, force);
 
             UpdateRaycastOrigins();
             collisions.Reset();
             collisions.velocityOld = velocity;
+
+            Debug.DrawRay(raycastOrigins.bottomLeft, Vector2.right * 0.5f, Color.red);
+            Debug.DrawRay(raycastOrigins.bottomRight, Vector2.right * 0.5f, Color.red);
+            Debug.DrawRay(raycastOrigins.topLeft, Vector2.right * 0.5f, Color.red);
+            Debug.DrawRay(raycastOrigins.topRight, Vector2.right * 0.5f, Color.red);
 
             if (velocity.x != 0)
             {
@@ -315,12 +317,14 @@ public class PlayerController : MonoBehaviour
 
     public void ActivateMove()
     {
+        if (autoMove)
+            return;
         player.hasControl = true;
     }
 
-    private void Flip(float xVelocity)
+    public void Flip(float xVelocity, bool force = false)
     {
-        if (player.hasControl)
+        if (player.hasControl || force)
         {
             if (xVelocity < 0)
             {
@@ -379,7 +383,7 @@ public class PlayerController : MonoBehaviour
         {
             WakeUp();
         }
-        else if (alreadyWake && !player.hasControl)
+        else if (alreadyWake && !player.hasControl && !autoMove)
         {
             animator.Play("Idle");
             player.hasControl = true;
@@ -391,7 +395,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsWake", true);
     }
 
-    private void Walk(Vector2 dir)
+    public void Walk(Vector2 dir)
     {
         Vector2 moveDirection = dir;
 
@@ -408,8 +412,6 @@ public class PlayerController : MonoBehaviour
             }
 
             float adjustedSpeed = useableSpeed * Mathf.Cos(slopeAngle * Mathf.Deg2Rad);
-
-            Debug.Log(adjustedSpeed);
 
             rb.velocity = moveDirection * adjustedSpeed;
             currentMomentum = rb.velocity;

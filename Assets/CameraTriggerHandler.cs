@@ -35,8 +35,7 @@ public class CameraTriggerHandler : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             //skybox.GetComponent<SkyboxHelper>().scale = skyboxScale;
-            camFollow.zoomFactor = zoomFactor;
-            camFollow.offset = followOffset;
+            mainCameraFollow.SetFollowTargets(followOffset, zoomFactor);
             mainCameraFollow.SetCameraState(newState, leftBounds, topBounds, rightBounds, bottomBounds);
         }
     }
