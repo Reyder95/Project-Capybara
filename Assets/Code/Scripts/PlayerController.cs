@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
 
     private Rigidbody2D rb;
+    public GameObject spriteObject;
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
@@ -85,7 +86,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = spriteObject.GetComponent<Animator>();
         player = GetComponent<Player>();
 
         //activePowerUp.Effect(this.gameObject);
@@ -103,6 +104,7 @@ public class PlayerController : MonoBehaviour
 
     void HorizontalCollisions(ref Vector3 velocity)
     {
+
         float directionX = Mathf.Sign(velocity.x);
         float rayLength = Mathf.Abs(velocity.x) + skinWidth;
 
@@ -110,6 +112,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 rayOrigin = (directionX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
             rayOrigin += Vector2.up * (horizontalRaySpacing * i);
+            Debug.DrawRay(rayOrigin, Vector2.right * directionX * 1f, Color.red, 0.1f); // fixed visual length of 1 unit
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
 
             Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength, Color.red);
@@ -328,6 +331,7 @@ public class PlayerController : MonoBehaviour
         {
             if (xVelocity < 0)
             {
+                flipped = true;
                 animator.SetBool("NoBond", true);
                 Vector3 animatorScale = animator.transform.localScale;
 
@@ -339,6 +343,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (xVelocity > 0)
             {
+                flipped = false;
                 animator.SetBool("NoBond", false);
                 Vector3 animatorScale = animator.transform.localScale;
 
@@ -350,25 +355,6 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        //if (player.hasControl)
-        //{
-
-        //    flipped = !flipped;
-
-        //    if (!flipped)
-        //    {
-        //        animator.SetBool("NoBond", false);
-        //    }
-        //    else
-        //    {
-        //        animator.SetBool("NoBond", true);
-        //    }
-
-        //    Vector3 animatorScale = animator.transform.localScale;
-        //    animatorScale.x *= -1;
-        //    animator.transform.localScale = animatorScale;
-        //}
-
     }
 
     private void LateUpdate()
@@ -393,41 +379,5 @@ public class PlayerController : MonoBehaviour
     private void WakeUp()
     {
         animator.SetBool("IsWake", true);
-    }
-
-    public void Walk(Vector2 dir)
-    {
-        Vector2 moveDirection = dir;
-
-        if (player.hasControl)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 20f, groundLayer);
-
-            if (slopeAngle != 0)
-            {
-                float slopeDirection = Mathf.Sign(hit.normal.x);
-                float slopeAngleRad = slopeAngle * Mathf.Deg2Rad;
-                moveDirection.x = Mathf.Cos(slopeAngleRad) * slopeDirection;
-                moveDirection.y = Mathf.Sin(slopeAngleRad);
-            }
-
-            float adjustedSpeed = useableSpeed * Mathf.Cos(slopeAngle * Mathf.Deg2Rad);
-
-            rb.velocity = moveDirection * adjustedSpeed;
-            currentMomentum = rb.velocity;
-
-            if (dir.x != 0)
-            {
-
-                animator.SetBool("IsWalk", true);
-                animator.SetBool("IsIdle", false);
-            }
-            else
-            {
-                animator.SetBool("IsWalk", false);
-                animator.SetBool("IsIdle", true);
-            }
-        }
-
     }
 }

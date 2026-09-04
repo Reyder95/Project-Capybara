@@ -20,7 +20,7 @@ public class BackgroundTrigger : MonoBehaviour
 
             SkyboxHelper underground = backgrounds.GetBackground(backgroundIndex);
 
-            underground.AdjustY(adjustYTransition);
+            underground.AdjustY(true);
         }
     }
 }

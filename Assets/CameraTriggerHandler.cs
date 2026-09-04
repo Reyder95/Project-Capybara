@@ -11,7 +11,7 @@ public class CameraTriggerHandler : MonoBehaviour
     public float leftBounds = 0.0f;
     public float rightBounds = 0.0f;
     public float topBounds = 0.0f;
-    public float bottomBounds = 0.0f;
+    public float bottomBounds = -150f;
 
     public Vector2 followOffset;
     public float zoomFactor = 1f;

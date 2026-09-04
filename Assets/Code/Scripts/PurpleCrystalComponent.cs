@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PurpleCrystalComponent : MonoBehaviour
+public class PurpleCrystalComponent : AbilityComponent
 {
     public bool shot = false;
     public Vector3 initPoint;

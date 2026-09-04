@@ -1,0 +1,723 @@
+fileFormatVersion: 2
+guid: 8f0c1db53169ccc489dc9f884c3fea79
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8113814671039774690
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_0
+  - first:
+      213: -2851562855239139790
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_1
+  - first:
+      213: 5965788181453940338
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_2
+  - first:
+      213: -6405720546888613646
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_3
+  - first:
+      213: 2299972538664061579
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_4
+  - first:
+      213: -8762243375973283173
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_5
+  - first:
+      213: 596816104847273215
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_6
+  - first:
+      213: 7371581612434166148
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_7
+  - first:
+      213: 2804441102441127047
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_8
+  - first:
+      213: 2783324405130685764
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_9
+  - first:
+      213: -5297123023124256698
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_10
+  - first:
+      213: 165814101939255221
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_11
+  - first:
+      213: -8478231531441587380
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_12
+  - first:
+      213: -8316289535155338805
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_13
+  - first:
+      213: -271981963030261990
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_14
+  - first:
+      213: -6396139893310675611
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_15
+  - first:
+      213: -2886432464302215954
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_16
+  - first:
+      213: 2651845475038569623
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_17
+  - first:
+      213: 621130023211392829
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_18
+  - first:
+      213: 3364759098064602512
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_19
+  - first:
+      213: 6293305094478113978
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_20
+  - first:
+      213: 7205162297613853804
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_21
+  - first:
+      213: 1070642278524102189
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_22
+  - first:
+      213: 4392136894603555949
+    second: Meditation_Beach_Destructible_Boulder_Blast_Sheet_23
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e104257ab80f56f80800000000000000
+      internalID: -8113814671039774690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23eb5cef0b63d68d0800000000000000
+      internalID: -2851562855239139790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27629c03ebcbac250800000000000000
+      internalID: 5965788181453940338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f088400a1f4a17a0800000000000000
+      internalID: -6405720546888613646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a893096d42bef10800000000000000
+      internalID: 2299972538664061579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ac79be212466680800000000000000
+      internalID: -8762243375973283173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc67a5d511584800800000000000000
+      internalID: 596816104847273215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48190f19b6e1d4660800000000000000
+      internalID: 7371581612434166148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c1288f2506be620800000000000000
+      internalID: 2804441102441127047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d6d7ebcca50a620800000000000000
+      internalID: 2783324405130685764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648a2230da6dc76b0800000000000000
+      internalID: -5297123023124256698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7f6d41c071d4200800000000000000
+      internalID: 165814101939255221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b78ec7755475a80800000000000000
+      internalID: -8478231531441587380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc184c7baba969c80800000000000000
+      internalID: -8316289535155338805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f844c78d9b93cf0800000000000000
+      internalID: -271981963030261990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565238db7a85c37a0800000000000000
+      internalID: -6396139893310675611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec6c1977f451f7d0800000000000000
+      internalID: -2886432464302215954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794a6e2d86f3dc420800000000000000
+      internalID: 2651845475038569623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f58d81772be9800800000000000000
+      internalID: 621130023211392829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09587ea829602be20800000000000000
+      internalID: 3364759098064602512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc268bd3af465750800000000000000
+      internalID: 6293305094478113978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64af426fe0edf360800000000000000
+      internalID: 7205162297613853804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26a1f4da7fabde00800000000000000
+      internalID: 1070642278524102189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meditation_Beach_Destructible_Boulder_Blast_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 0
+        width: 150
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d647bbf2c3104fc30800000000000000
+      internalID: 4392136894603555949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_0: -8113814671039774690
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_1: -2851562855239139790
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_10: -5297123023124256698
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_11: 165814101939255221
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_12: -8478231531441587380
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_13: -8316289535155338805
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_14: -271981963030261990
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_15: -6396139893310675611
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_16: -2886432464302215954
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_17: 2651845475038569623
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_18: 621130023211392829
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_19: 3364759098064602512
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_2: 5965788181453940338
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_20: 6293305094478113978
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_21: 7205162297613853804
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_22: 1070642278524102189
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_23: 4392136894603555949
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_3: -6405720546888613646
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_4: 2299972538664061579
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_5: -8762243375973283173
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_6: 596816104847273215
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_7: 7371581612434166148
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_8: 2804441102441127047
+      Meditation_Beach_Destructible_Boulder_Blast_Sheet_9: 2783324405130685764
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

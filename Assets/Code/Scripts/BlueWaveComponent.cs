@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlueWaveComponent : MonoBehaviour
+public class BlueWaveComponent : AbilityComponent
 {
     public bool shot = false;
     public Vector3 initPoint;
@@ -34,6 +34,7 @@ public class BlueWaveComponent : MonoBehaviour
     {
         shot = true;
         flippedShot = Game.Instance.player.GetComponent<PlayerController>().flipped;
+        Debug.Log(flippedShot);
         if (flippedShot)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
@@ -50,9 +51,10 @@ public class BlueWaveComponent : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        base.OnTriggerEnter2D(collision);
         if (collision != null)
         {
-            if (collision.gameObject.tag == "Enemy Internal")
+            if (collision.gameObject.tag == "Enemy Internal" || collision.gameObject.tag == "Destructable")
             {
                 if (collision.isTrigger)
                 {
@@ -62,7 +64,6 @@ public class BlueWaveComponent : MonoBehaviour
                         stats.DealDamage(5);
                     }
                 }
-
             }
         }
 
