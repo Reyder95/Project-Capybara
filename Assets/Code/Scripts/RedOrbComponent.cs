@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedOrbComponent : MonoBehaviour
+public class RedOrbComponent : AbilityComponent
 {
     public bool shot = false;
     public Vector3 initPoint;

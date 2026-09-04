@@ -124,7 +124,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.16666667
-    functionName: ActivateMove
+    functionName: OnActivateMoveFrame
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: b67b8d950b85b5640b6a55c258749589, type: 3}
     floatParameter: 0

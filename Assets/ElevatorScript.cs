@@ -10,6 +10,7 @@ public class ElevatorScript : MonoBehaviour
     public bool positioning = false;
     public bool activatedButton = false;
     public GameObject playerPosition;
+    public float speed = 2f;
     public void HandleTrigger(GameObject other)
     {
         if (!activatedButton)
@@ -54,7 +55,7 @@ public class ElevatorScript : MonoBehaviour
         if (moving)
         {
             controller.Move(new Vector2(0, 0), true);
-            transform.position = new Vector2(transform.position.x, transform.position.y + 1f * Time.deltaTime);
+            transform.position = new Vector2(transform.position.x, transform.position.y + speed * Time.deltaTime);
 
             if (transform.position.y >= destinationObject.transform.position.y)
             {

@@ -23,7 +23,7 @@ public class CameraFollow : MonoBehaviour
     private float leftBound = -10.79f;
     private float rightBound = 900.43f;
     private float topBound = 25f;
-    private float bottomBound = -5f;
+    private float bottomBound = -100f;
 
     private CameraState state = CameraState.FOLLOW;
 
